@@ -1,0 +1,27 @@
+.link {
+}
+
+.buttonLink {
+  display: inline-block;
+  vertical-align: center;
+  padding: var(--space-small, 10px) var(--space, 20px);
+  text-decoration: none;
+  color: var(--on-primary-dark, #fff);
+  background-color: var(--primary-dark-300, #16538d);
+
+  transition: color, background-color ease 0.3s;
+}
+
+.buttonLink:hover {
+  background-color: var(--primary-dark-200, #2a81d3);
+}
+
+.buttonLink__disabled {
+  cursor: not-allowed;
+  color: var(--on-disabled, #383838);
+  background-color: var(--disabled, #ccc);
+}
+
+.buttonLink__disabled:hover {
+  background-color: var(--disabled, #ccc);
+}

@@ -1,0 +1,12 @@
+.footerNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-small, 10px);
+  background-color: var(--primary-light, #ccc);
+}
+
+.delimiter{
+  padding-left: var(--space, 20px);
+  padding-right: var(--space, 20px);
+}

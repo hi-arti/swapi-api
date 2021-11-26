@@ -1,0 +1,13 @@
+.relationsLinksList {
+
+}
+
+.relationsLinksItems {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.relationsLinksItem:not(:last-child) {
+  margin-bottom: var(--space-small, 10px);
+}

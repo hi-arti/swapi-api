@@ -1,0 +1,8 @@
+.favoriteButton {
+  cursor: pointer;
+  fill: var(--disabled, #ccc);
+}
+
+.favoriteButtonActive{
+  fill: var(--primary-dark-100, #42a5f5);
+}

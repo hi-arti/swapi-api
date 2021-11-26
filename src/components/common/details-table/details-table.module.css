@@ -1,0 +1,19 @@
+.detailsTable {
+  width: 100%;
+}
+
+.detailsTableRow {
+  background-color: var(--primary-light-200, #e3f2fd);
+}
+
+.detailsTableRow:nth-child(2n) {
+  background-color: var(--primary-light-300, #bdc8d3);
+}
+
+.detailsTableRow:hover {
+  background-color: var(--primary-light-100, #d6dfec);
+}
+
+.detailsTableCell {
+  padding: var(--space-xsmall, 5px);
+}

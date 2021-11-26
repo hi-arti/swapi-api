@@ -1,0 +1,35 @@
+.topMenuName{
+  font-weight: var(--font-weight-bold, 700);
+}
+
+.topMenuItems {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.topMenuItem:not(:last-child) {
+  margin-right: var(--space-small, 10px);
+}
+
+.topMenuItemLink {
+  display: block;
+  padding: var(--space-small, 10px);
+  line-height: 1.3em;
+  text-decoration: none;
+  color: var(--on-secondary-light, #705D56);
+  background-color: var(--secondary-light-100, #9097C0);
+}
+
+.topMenuItemLink:visited {
+  text-decoration: none;
+  color: var(--on-secondary-light, #705D56);
+}
+
+.topMenuItemLink:hover {
+  background-color: var(--secondary-light-200, #705D56);
+}

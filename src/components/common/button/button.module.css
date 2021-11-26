@@ -1,0 +1,27 @@
+.button {
+  display: inline-block;
+  vertical-align: center;
+  cursor: pointer;
+  padding: var(--space-small, 10px) var(--space, 20px);
+  text-decoration: none;
+  color: var(--on-primary-dark, #fff);
+  background-color: var(--primary-dark-300, #16538d);
+
+  border: 0;
+
+  transition: color, background-color ease 0.3s;
+}
+
+.button:hover {
+  background-color: var(--primary-dark-200, #2a81d3);
+}
+
+.button__disabled {
+  cursor: not-allowed;
+  color: var(--on-disabled, #383838);
+  background-color: var(--disabled, #ccc);
+}
+
+.button__disabled:hover {
+  background-color: var(--disabled, #ccc);
+}

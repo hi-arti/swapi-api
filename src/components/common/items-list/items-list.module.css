@@ -1,0 +1,43 @@
+.itemsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.itemLayout {
+  border: 1px solid #cccd;
+  padding: var(--space-small, 10px);
+
+  margin-bottom: var(--space-small, 10px);
+
+  flex-basis: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .itemLayout {
+    max-width: 50%;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .itemLayout {
+    max-width: 33%;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .itemLayout {
+    max-width: 25%;
+  }
+}
+
+.itemLayout:hover {
+  border: 1px solid #000;
+}
+
+.itemLayoutFooter {
+  display: flex;
+  vertical-align: center;
+  justify-content: space-between;
+  padding-top: var(--space-small, 5px);
+}
