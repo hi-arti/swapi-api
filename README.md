@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Web client for https://swapi.dev/api/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
