@@ -1,23 +1,23 @@
 import { useCurrentPath } from 'hooks/router'
 import { useEffect } from 'react'
 
-import { films } from 'store'
+import { planets } from 'store'
 
-import { FilmDetails } from 'components/films/film-details'
+import { PlanetDetails } from 'components/planets/planet-details'
 import { PageLayout } from '../common/page-layout'
 
-function Film() {
+function Planet() {
   const currentPath = useCurrentPath()
 
   useEffect(() => {
-    films.actions.loadEntityIfNeeded(currentPath)
+    planets.actions.loadEntityIfNeeded(currentPath)
   }, [currentPath])
 
-  const status = films.store.usePickState(
+  const status = planets.store.usePickState(
     state => state.statuses[currentPath],
     [currentPath]
   )
-  const entity = films.store.usePickState(
+  const entity = planets.store.usePickState(
     state => state.resources[currentPath],
     [currentPath]
   )
@@ -41,9 +41,9 @@ function Film() {
 
   return (
     <PageLayout>
-      <FilmDetails entity={entity} />
+      <PlanetDetails entity={entity} />
     </PageLayout>
   )
 }
 
-export { Film }
+export { Planet }

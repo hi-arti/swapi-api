@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { films, vehicles, people } from 'store'
+import { films, vehicles, people, planets } from 'store'
 
 import { InternalLink } from 'components/common/link/internal'
 
@@ -7,6 +7,7 @@ const apiProvidersBySection = {
   films,
   vehicles,
   people,
+  planets,
 }
 
 export interface EntityRelationLinkPropsI {

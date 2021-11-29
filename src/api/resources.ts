@@ -3,6 +3,7 @@ import { makeApiEndpoint } from './make-endpoint'
 import { VehicleI } from 'interfaces/vehicles'
 import { PersonI } from 'interfaces/people'
 import { FilmI } from 'interfaces/films'
+import { PlanetI } from '../interfaces/planets'
 
 export const filmsApi = makeApiEndpoint<FilmI>([
   'characters',
@@ -18,5 +19,10 @@ export const peopleApi = makeApiEndpoint<PersonI>([
   'vehicles',
   'starships',
   'homeworld',
+  'url',
+])
+export const planetsApi = makeApiEndpoint<PlanetI>([
+  'residents',
+  'films',
   'url',
 ])

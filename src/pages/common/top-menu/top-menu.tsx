@@ -20,6 +20,12 @@ const menuItems = [
     routeName: RouteNames.people,
     path: routesMap[RouteNames.people].path,
   },
+
+  {
+    label: 'Planets',
+    routeName: RouteNames.planets,
+    path: routesMap[RouteNames.planets].path,
+  },
 ]
 
 function TopNavigations() {

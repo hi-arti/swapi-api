@@ -13,6 +13,9 @@ import { Person as PersonPage } from './people/person'
 import { Films as FilmsPage } from './films/films'
 import { Film as FilmPage } from './films/film'
 
+import { Planets as PlanetsPage } from './planets/planets'
+import { Planet as PlanetPage } from './planets/planet'
+
 const routesPages = {
   [RouteNames.films]: FilmsPage,
   [RouteNames.film]: FilmPage,
@@ -22,6 +25,9 @@ const routesPages = {
 
   [RouteNames.people]: PeoplePage,
   [RouteNames.person]: PersonPage,
+
+  [RouteNames.planets]: PlanetsPage,
+  [RouteNames.planet]: PlanetPage,
 }
 
 function Router() {
