@@ -35,13 +35,11 @@ function PlanetDetails(props: PlanetDetailsPropsI) {
           title="Films:"
           relationType="films"
           relationUrls={entity.films}
-          labelRelationKey="title"
         />
         <RelationsLinks
           title="People:"
           relationType="people"
           relationUrls={entity.residents}
-          labelRelationKey="name"
         />
       </Flex>
     </article>

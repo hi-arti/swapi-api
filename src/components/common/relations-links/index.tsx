@@ -9,11 +9,10 @@ export interface RelationsLinksPropsI {
   title: string
   relationUrls: string[]
   relationType: EntityRelationLinkPropsI['resourceName']
-  labelRelationKey: string
 }
 
 function RelationsLinks(props: RelationsLinksPropsI) {
-  const { title, relationUrls, relationType, labelRelationKey } = props
+  const { title, relationUrls, relationType } = props
 
   return (
     <article>
@@ -24,11 +23,7 @@ function RelationsLinks(props: RelationsLinksPropsI) {
         {relationUrls.map(url => {
           return (
             <li key={url} className={classNames.relationsLinksItem}>
-              <EntityRelationLink
-                url={url}
-                labelKey={labelRelationKey}
-                resourceName={relationType}
-              />
+              <EntityRelationLink url={url} resourceName={relationType} />
             </li>
           )
         })}

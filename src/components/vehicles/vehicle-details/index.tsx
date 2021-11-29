@@ -36,13 +36,11 @@ function VehicleDetails(props: VehicleDetailsPropsI) {
         title="Pilots:"
         relationType="people"
         relationUrls={entity.pilots}
-        labelRelationKey="name"
       />
       <RelationsLinks
         title="Films:"
         relationType="films"
         relationUrls={entity.films}
-        labelRelationKey="title"
       />
     </article>
   )

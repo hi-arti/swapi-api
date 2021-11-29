@@ -3,6 +3,8 @@ import classNames from './details-table.module.css'
 import Dictionary from 'interfaces/utils'
 
 export interface DetailsTablePropsI {
+  // TODO: refactor details format to { title, value }[]
+  // and add support to show dynamic link
   details: Dictionary<string | number>
 }
 

@@ -32,19 +32,16 @@ function FilmDetails(props: FilmDetailsPropsI) {
           title="Characters:"
           relationType="people"
           relationUrls={entity.characters}
-          labelRelationKey="name"
         />
         <RelationsLinks
           title="Vehicles:"
           relationType="vehicles"
           relationUrls={entity.vehicles}
-          labelRelationKey="name"
         />
         <RelationsLinks
           title="Planets:"
           relationType="planets"
           relationUrls={entity.planets}
-          labelRelationKey="name"
         />
       </Flex>
     </article>

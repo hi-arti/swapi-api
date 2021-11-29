@@ -4,7 +4,7 @@ import { Flex } from 'components/common/flex'
 import { FavoriteButton } from 'components/common/favorite-button'
 import { DetailsTable } from 'components/common/details-table'
 import { RelationsLinks } from 'components/common/relations-links'
-import { EntityRelationLink } from '../../common/entity-relation-link'
+import { EntityRelationLink } from 'components/common/entity-relation-link'
 
 export interface PersonDetailsPropsI {
   entity: PersonI
@@ -31,24 +31,18 @@ function PersonDetails(props: PersonDetailsPropsI) {
       </Flex>
       <div>
         Home worlds:{' '}
-        <EntityRelationLink
-          url={entity.homeworld}
-          resourceName="planets"
-          labelKey="name"
-        />
+        <EntityRelationLink url={entity.homeworld} resourceName="planets" />
       </div>
       <DetailsTable details={details} />
       <RelationsLinks
         title="Films:"
         relationType="films"
         relationUrls={entity.films}
-        labelRelationKey="title"
       />
       <RelationsLinks
         title="Vehicles:"
         relationType="vehicles"
         relationUrls={entity.vehicles}
-        labelRelationKey="name"
       />
     </article>
   )

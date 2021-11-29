@@ -3,23 +3,22 @@ import { films, vehicles, people, planets } from 'store'
 
 import { InternalLink } from 'components/common/link/internal'
 
-const apiProvidersBySection = {
-  films,
-  vehicles,
-  people,
-  planets,
+const sections = {
+  films: { resource: films, labelKey: 'title' },
+  vehicles: { resource: vehicles, labelKey: 'name' },
+  people: { resource: people, labelKey: 'name' },
+  planets: { resource: planets, labelKey: 'name' },
 }
 
 export interface EntityRelationLinkPropsI {
   url: string
-  resourceName: keyof typeof apiProvidersBySection
-  labelKey: string
+  resourceName: keyof typeof sections
 }
 
 function EntityRelationLink(props: EntityRelationLinkPropsI) {
-  const { url, labelKey, resourceName } = props
+  const { url, resourceName } = props
 
-  const resource = apiProvidersBySection[resourceName]
+  const { resource, labelKey } = sections[resourceName]
 
   useEffect(() => {
     resource.actions.loadEntityIfNeeded(url)
