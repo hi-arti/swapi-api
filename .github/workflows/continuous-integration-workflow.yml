@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CI: false
-      PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
-      REACT_APP_BASENAME_URL: ${{ secrets.REACT_APP_BASENAME_URL }}
+      PUBLIC_URL: /swapi-api-web-client
+      REACT_APP_BASENAME_URL: /swapi-api-web-client
     steps:
       - name: Checkout
         uses: actions/checkout@v2
