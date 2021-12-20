@@ -1,3 +1,11 @@
+function concatToPublicPath(path: string) {
+  if (!process.env.RELATIVE_PATH) {
+    return path
+  }
+
+  return [process.env.RELATIVE_PATH, path].join('')
+}
+
 enum RouteNames {
   films = 'films',
   film = 'film',
@@ -13,15 +21,15 @@ enum RouteNames {
 }
 
 const routesMap = {
-  [RouteNames.films]: { path: '/films' },
-  [RouteNames.film]: { path: '/films/:id' },
-  [RouteNames.vehicle]: { path: '/vehicles/:id' },
-  [RouteNames.vehicles]: { path: '/vehicles' },
-  [RouteNames.vehicle]: { path: '/vehicles/:id' },
-  [RouteNames.people]: { path: '/people' },
-  [RouteNames.person]: { path: '/people/:id' },
-  [RouteNames.planets]: { path: '/planets' },
-  [RouteNames.planet]: { path: '/planets/:id' },
+  [RouteNames.films]: { path: concatToPublicPath('/films') },
+  [RouteNames.film]: { path: concatToPublicPath('/films/:id') },
+  [RouteNames.vehicle]: { path: concatToPublicPath('/vehicles/:id') },
+  [RouteNames.vehicles]: { path: concatToPublicPath('/vehicles') },
+  [RouteNames.vehicle]: { path: concatToPublicPath('/vehicles/:id') },
+  [RouteNames.people]: { path: concatToPublicPath('/people') },
+  [RouteNames.person]: { path: concatToPublicPath('/people/:id') },
+  [RouteNames.planets]: { path: concatToPublicPath('/planets') },
+  [RouteNames.planet]: { path: concatToPublicPath('/planets/:id') },
 }
 
 export { RouteNames, routesMap }
