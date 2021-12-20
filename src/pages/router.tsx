@@ -33,8 +33,10 @@ const routesPages = {
 function Router() {
   const routeNames = Object.keys(routesMap) as unknown as RouteNames[]
 
+  console.log('process.env', process.env)
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.REACT_APP_BASENAME_URL}>
       <Routes>
         {routeNames.map(routeName => {
           const Page = routesPages[routeName]
