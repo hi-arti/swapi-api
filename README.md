@@ -1,4 +1,4 @@
-# Web client for [swapi.dev](https://swapi.dev/api/) to overview open below link https://hi-arti.github.io/swapi-api/
+# Web client for [swapi.dev](https://swapi.dev/api/) to overview open below link https://hi-arti.github.io/swapi-api-web-client/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
